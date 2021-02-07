@@ -14,7 +14,34 @@ header {
   background-color: #192057;
   padding: 1.5rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.btn-home {
+  color: white;
+  background-color: #192057;
+  outline: none;
+  border: 2px solid #030725;
+  border-radius: 7px;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.btn-home a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-home:hover {
+  background-color: #030725;
+}
+
+.logo {
+  width: 12.5rem;
+  display: flex;
+  align-items: baseline;
+  margin: 0rem;
 }
 
 .search {
@@ -41,6 +68,8 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
+  justify-content:space-around;
+  padding: 2rem;
 }
 
 .movie {
@@ -98,7 +127,7 @@ main {
   left: 0;
   right: 0;
   color: #030725;
-  transform: translateY(-100%);
+  transform: translateY(-102%);
   transition: transform 0.3s ease-in;
   text-align: justify;
   max-height: 100%;
