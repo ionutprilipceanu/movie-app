@@ -8,23 +8,27 @@
 </head>
 <body>
   <header>
-    <button class="btn-home">
-      <a class="activ" href="index.html">Home</a></li>
-    </button>
+    
+    
 
     <div>
       <img src="./image/logo.png" alt="image" class="logo">
     </div>
     
+    <div class="btn-form">
+      <button class="btn-home">
+        <a class="activ" href="index.html">Home</a></li>
+      </button>
+      <form id="form">
+        <input 
+          type="text" 
+          id="search" 
+          placeholder="Search"
+          class="search">
+        </input>
+      </form>
+    </div>
 
-    <form id="form">
-      <input 
-        type="text" 
-        id="search" 
-        placeholder="Search"
-        class="search">
-      </input>
-    </form>
     
   </header>
 
@@ -32,23 +36,24 @@
   </Main>
 
   <footer class="footer">
-    <ul>
-      <li>on-movie.com</li>
-      <li>Free online movie 2021 </li>
-    </ul>
-
     <form id="subscribe">
       <input 
         type="text" 
         id="search" 
         placeholder="Subscribe"
-        class="search">
+        class="subscribe">
       </input>
 
-      <button class="btn-home">
+      <button class="btn-send">
         Send
       </button>
     </form>
+
+    <ul class="sloganLogo">
+      <li>on-movie.com</li>
+      <li>Free online movie 2021 </li>
+    </ul>
+
   </footer>
 
   <script src="./script.js"></script>
