@@ -37,23 +37,25 @@
   </Main>
 
   <footer class="footer">
-    <form id="subscribe">
-      <input 
-        type="text" 
-        id="search" 
-        placeholder="Subscribe"
-        class="subscribe">
-      </input>
+    
+    <div class="tabel">
+      <div id="error_message"></div>
+        <form id="myform" class="subscribes" onsubmit="return validation()" action="" method="_post">
+          <div>
+            <!-- <label for="mail">E-mail:</label><br> -->
+            <input type="text" id="mail" class="subscribe" placeholder="Adresa de e-mail..">
+          </div>
 
-      <button class="btn-send">
-        Send
-      </button>
-    </form>
+          <div><input class="btn-send" type="submit"></div>
+        </form> 
+    </div>
 
     <ul class="sloganLogo">
       <li>on-movie.com</li>
       <li>Free online movie 2021 </li>
-    </ul>
+    </ul> 
+
+
 
   </footer>
 

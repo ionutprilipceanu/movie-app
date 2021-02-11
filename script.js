@@ -7,6 +7,7 @@ const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 
+
 getMovies(APIURL);
 
 async function getMovies(url) {
@@ -69,5 +70,20 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+function validation (){
 
+	var mail = document.getElementById("mail").value;
+	var error_message = document.getElementById("error_message");
+	var text;
 
+	error_message.style.padding = "12px";
+
+	if(mail.indexOf("@") == -1 || mail.length <6){
+		text = "Te rog să introduci o adresă de e-mail validă!";
+		error_message.innerHTML = text;
+		return false;
+	}
+
+	alert("Congratulations! You have successfully subscribed!")
+	return true;
+}

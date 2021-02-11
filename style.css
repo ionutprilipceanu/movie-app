@@ -193,7 +193,7 @@ main {
   background-color: #030725;
 }
 
-#subscribe{
+.subscribes{
   display: flex;
   flex-direction: row;
 }
@@ -219,6 +219,18 @@ main {
 .subscribe:focus{
   background-color: #030725;
   outline: none;
+}
+
+#error_message{
+  width: auto;
+  margin: 15px 0 -15px 0;
+  padding: 0px;
+  background:#fe8b8e; 
+  text-align: center;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+  color:black;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 620px) {
