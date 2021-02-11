@@ -76,10 +76,10 @@ function validation (){
 	var error_message = document.getElementById("error_message");
 	var text;
 
-	error_message.style.padding = "12px";
+	error_message.style.padding = "10px";
 
 	if(mail.indexOf("@") == -1 || mail.length <6){
-		text = "Te rog să introduci o adresă de e-mail validă!";
+		text = "Please, enter a valid email!";
 		error_message.innerHTML = text;
 		return false;
 	}
