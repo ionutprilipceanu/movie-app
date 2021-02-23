@@ -13,7 +13,7 @@ getMovies(APIURL);
 async function getMovies(url) {
   const resp = await fetch(url);
   const respData = await resp.json();
-  
+
   console.log(respData);
 
   showMovies(respData.results);
@@ -25,12 +25,12 @@ function showMovies(movies) {
   main.innerHTML = '';
 
   movies.forEach(movie => {
-    const {poster_path, title, vote_average, overview} = movie
+    const { poster_path, title, vote_average, overview } = movie
     const movieEl = document.createElement('div');
     movieEl.classList.add('movie');
 
-    movieEl.innerHTML = 
-    `
+    movieEl.innerHTML =
+      `
       <img 
       src="${IMGPATH + poster_path}" 
       alt="${title}"/>
@@ -43,13 +43,13 @@ function showMovies(movies) {
         ${overview}
       </div>
     `;
-    
+
     main.appendChild(movieEl);
   });
 }
 
-function getClassByRate(vote){
-  if(vote >= 8) {
+function getClassByRate(vote) {
+  if (vote >= 8) {
     return 'green';
   } else if (vote >= 6) {
     return 'orange';
@@ -63,27 +63,27 @@ form.addEventListener('submit', (e) => {
 
   const searchTerm = search.value;
 
-  if(searchTerm) {
+  if (searchTerm) {
     getMovies(SEARCHAPI + searchTerm);
 
     search.value = '';
   }
 });
 
-function validation (){
+function validation() {
 
-	var mail = document.getElementById("mail").value;
-	var error_message = document.getElementById("error_message");
-	var text;
+  var mail = document.getElementById("mail").value;
+  var error_message = document.getElementById("error_message");
+  var text;
 
-	error_message.style.padding = "10px";
+  error_message.style.padding = "10px";
 
-	if(mail.indexOf("@") == -1 || mail.length <6){
-		text = "Please, enter a valid email!";
-		error_message.innerHTML = text;
-		return false;
-	}
+  if (mail.indexOf("@") == -1 || mail.length < 6) {
+    text = "Please, enter a valid email!";
+    error_message.innerHTML = text;
+    return false;
+  }
 
-	alert("Congratulations! You have successfully subscribed!")
-	return true;
+  alert("Congratulations! You have successfully subscribed!")
+  return true;
 }
